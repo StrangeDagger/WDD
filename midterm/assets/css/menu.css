@@ -1,0 +1,294 @@
+@keyframes fadeIn {
+    from { 
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+html, body {
+    margin: 0;
+}
+
+
+body {
+    background-color: black;
+    font-family: 'Merriweather', serif;
+}
+
+
+a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+h3{
+    color: aliceblue;
+}
+
+#header_content {
+    background-image: url('../img/bgimage.png');
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#image_banner {
+    background-image: url('../img/menupic.png');
+    background-size: cover;
+
+    width: auto;
+    height: 420px;
+    opacity: 75%;
+
+    animation: fadeIn 0.5;
+    animation-duration: 2s;
+}
+
+
+#menu_banner {
+    background-color: black;
+    width: 100%;
+
+    opacity: 60%;   
+}
+
+#menu_container_section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.menu_item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    opacity: 75%;
+}
+
+.menu_item:hover {
+    opacity: 100%;
+}
+
+
+#menu--text {
+    color: white;
+    text-align:center;
+}
+
+.content3 {
+    background-image: url('../img/bgimage.png');
+    height: 80px;
+    width: 100%;
+}
+
+.footer_item {
+    color: white;
+    padding-top: 32px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.footer_item:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.nav:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#footer_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.content2{
+    background-color:white ;
+}
+
+.content3{
+    width: 100%;
+}
+
+#left_header { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#right_header { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+#nav_left {
+    color:aliceblue;
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+    justify-content: space-between;
+    align-items: center;
+ 
+}
+
+.shop-button {
+    margin-bottom: 24px;
+    color: black;
+}
+
+#nav_right {
+    color:aliceblue;
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+    justify-content: space-evenly;
+    align-items: center;
+ 
+}
+
+#menu_title{
+    width: 100%;
+    height: 100%;
+   
+}
+
+
+#menu_row_1, #menu_row_2, #menu_row_3{
+    
+    text-align:center;
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 32px;
+}
+
+.menu_item {
+    display: flex;
+    flex-direction: row;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+#menu_item_container {
+    text-align: left;
+}
+
+#menu_item_container_2 {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+
+}
+#add_button {
+    background-color: black;
+    text-align: center;
+	color: white; 
+    width: 32px;
+    height: 24px;
+}
+
+#drink_img {
+    padding-right: 32px;
+    width: 108px;
+    height: 108px;
+}
+
+.content2 {
+    align-items: center;
+    z-index: 0;
+    background-color: whitesmoke;
+}
+
+.content {
+    background-color: white;
+    z-index: 0;
+}
+
+#menu--content--column {
+    color: aliceblue;
+}
+
+.header_content {
+    position: fixed;
+}
+
+.shop-button {
+    background: rgb(255, 217, 16);
+	display: inline-block;
+	margin-top: 20px;
+	margin-left: 20px;
+    padding: 8px;
+	color: black;
+    
+}
+
+.nav_home, .nav_aboutus, .nav_menu, .nav_events {
+    padding: 8px;
+}
+
+.nav_login{
+    padding: 8px;
+    color: aliceblue;   
+}
+
+.nav_shop{
+    color: black;
+    padding: 8px;
+    background-color: rgb(255, 217, 16);
+    margin-left: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 32px;
+    height: 24px;
+}
+
+.logo {
+    width: 64px;
+    height: 64px;
+    margin-left: 32px;
+    margin-right: 48px;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.img:hover {
+  opacity: 50;
+  transition-duration: 0.2;
+}
+
+img {
+	height: 100%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
