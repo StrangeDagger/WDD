@@ -1,0 +1,215 @@
+/* -- LOADING ANIMATIONS -- */
+/* Loader one: Pulse */
+.loader.one {
+	width: 100px;
+	height: 100px;
+}
+
+.loader.one .circle {
+	height: 100px;
+	width: 100px;
+	background: #E427F9;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 50px;
+	/* TODO: PART 1.2 - Add pulse animation */
+	animation-name: pulse, scaleUp;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;	
+}
+
+/* TODO: PART 1.3 - Delay pulse animation for circle two */
+
+.loader.one .second {
+	animation-delay: .5s;
+}
+
+/* TODO: PART 1.1 - Create pulse animation */
+
+
+@keyframes pulse {
+	0% {opacity: 100%;}
+	100% {opacity: 0%;}
+}
+
+@keyframes scaleUp {
+	from {transform: scale(0);}
+	to {transform: scale(1);}
+}
+
+
+
+/* Loader two: Wave */
+.loader.two {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 110px;
+}
+
+.loader.two .dot {
+	height: 30px;
+	width: 30px;
+	background: #000;
+	border-radius: 15px;
+	background: #F76A4D;
+	/* TODO: PART 2 - Add wave animation */
+	position: relative;
+	animation-name: bounceUp;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+/* TODO: PART 2 - Add delays and dot colors */
+
+.loader.two .second {
+	background: #4DB1F7;
+	animation-delay: 0.25s;
+}
+
+.loader.two .third {
+	background: #7DE76A;
+	animation-delay: .50s;
+}
+
+/* TODO: PART 2 - Create wave animation */
+
+@keyframes bounceUp {
+	0% {top: 0px;}
+	50% {top: 50px;}
+	100% {top: 0px;}
+}
+/* Loader three: Flip */
+/* TODO: PART 3 - Style the flip card */
+
+.loader.three .flip-tile {
+	height: 100px;
+	width: 100px;
+	background: #F98527;
+
+	animation-name: flipTile;
+	animation-duration: 2.6s;
+	animation-iteration-count: infinite;
+}
+
+/* TODO: PART 3 - Add flip animation to flip card */
+
+/* TODO: PART 3 - Write flip animation */
+
+@keyframes flipTile {
+	0% { transform:perspective(300px);}
+	50% { transform: perspective(300px) rotateY(180deg); }
+	100% { transform: perspective(300px) rotateY(180deg) rotateX(180deg); }
+}
+
+/* Loader four: Spin */
+.loader.four .rings {
+	position: relative;
+	width: 100px;
+	height: 100px;
+}
+
+.loader.four .ring {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+}
+.loader.four .ring.two {
+	width: 80%;
+	height: 80%;
+}
+.loader.four .ring.three {
+	width: 60%;
+	height: 60%;
+}
+
+.loader.four .ring .mask {
+	width: 93%;
+	height: 93%;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%, -50%);
+	background: #E5F1F7;
+}
+
+.loader.four .ring .arc-container {
+	width: 80%;
+	height: 100%;
+	position: absolute;
+	left: 10%;
+	overflow: hidden;
+	transform-origin: 50% 50%;
+	/* TODO: PART 4 - Add spin animation */
+	animation-name: spin;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+/* TODO: PART 4 - Add spin shifts for other rings */
+
+.loader.four .ring .arc {
+	width: 100%;
+	height: 50%;
+	position: absolute;
+	background: #10D4C6;
+	/* TODO: PART 4 - Add color animation */
+
+	animation-name: switchColor;
+	animation-duration: 2.2s;
+	animation-iteration-count: infinite;
+}
+
+/* TODO: PART 4 - Add spin color shifts for other rings */
+.loader.four .ring.two .arc-container {
+	animation-name: spin;
+	animation-delay: 0.2s;
+	animation-duration: 1.5s;
+	animation-timing-function: linear;
+}
+
+.loader.four .ring.three .arc-container {
+	animation-name: spin;
+	animation-delay: 0.1s;
+	animation-duration: 0.8s;
+	animation-timing-function: linear;
+}
+
+.loader.four .ring.two .arc {
+	animation-name: switchColorReverse;
+}
+
+
+/* TODO: PART 4 - Create spin animation */
+@keyframes spin {
+	0% {
+		border-radius: 0%;
+		transform: rotate(0deg);
+	}
+	100% {
+		border-radius: 100%;
+		transform: rotate(360deg);
+	}
+}
+
+/* TODO: PART 4 - Create spin color animation */
+@keyframes switchColor {
+	0% {background: #10D4C6;}
+	50% {background:#3068CD; }
+	75% {background:#7910D4 ;}
+	100% {background:#41EA97;}	
+}
+
+@keyframes switchColorReverse {
+    0% { background: #41EA97; }
+    25% { background: #7910D4; }
+    50% { background: #3068CD; }
+    75% { background: #10D4C6; }
+}
