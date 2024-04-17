@@ -1,6 +1,79 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        FINAL
+<head>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Rajdhani:wght@300;400;500;600;700&family=Titan+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Griffy&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="content">
+            <div id="title">
+                 <b>Finding Kip</b>
+            </div>
+
+            <div class="snowflakes">
+                <div class="snowflake">•</div>
+                <div class="snowflake">•</div>
+                <div class="snowflake">•</div>
+                <div class="snowflake">•</div>
+                <div class="snowflake">•</div>
+                <div class="snowflake">•</div>
+                <div class="snowflake">•</div>
+                <div class="snowflake">•</div>
+                <div class="snowflake">•</div>
+                <div class="snowflake">•</div>
+                <div class="snowflake">•</div>
+                <div class="snowflake">•</div>
+                <div class="snowflake">•</div>
+                <div class="snowflake">•</div>
+                <div class="snowflake">•</div>
+                <div class="snowflake">•</div> 
+            </div>
+
+            <div id="intro">
+                <p> 3:45 am: It's winter. I can't believe I'm off to college. My plane leaves in an hour and a half and I probably
+                    won't be back until next year. I'm actually really sad. I'm going to miss everyone and every bit of 
+                    this quaint town... Wait. Kip! I must find my robot! When I'm at my lowest, my memories with Kip reminds me to stay strong. I must take him with me... I remember Mom put away most of my childhood
+                    stuff in the attic the other day.. Oh, right. Power is out. Let me grab the flash light.. </p>
+                </p>
+            </div>
+
+            <div id="choices-container">
+                <div> <img class="choice-image" id="choice-image1" src="assets/img/Screenshot 2024-04-16 at 12.46.45 AM.png"> </div>
+                <div> <img class="choice-image" id="choice-image2" src="assets/img/Screenshot 2024-04-16 at 12.45.53 AM.png"> </div>
+                <div> <a href="end2.html"><img class="choice-image" id="choice-image4" src="assets/img/Screenshot 2024-04-15 at 6.43.56 PM.png"></a> </div>
+            </div>
+
+            <div id="game-container">
+                <div class="mask"></div>
+                <a href="end1.html"><div class="" id="add-box-here"></div></a>
+                <img id="choice-img" src="assets/img/attic3.jpg" alt="atticimage">   
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
+    <script>
+        $(document).ready(function() {
+            $('#game-container').mousemove(function(e) {
+                const radius = 80; 
+                const rect = $(this).offset();
+                const x = e.pageX - rect.left - radius/2;
+                const y = e.pageY - rect.top - radius/2;
+        
+                $('.mask').css('background', 
+                    `radial-gradient(circle ${radius}px at ${x}px ${y}px, ` +
+                    `transparent 0%, rgba(0, 0, 0, 0.90) ${radius}px)`);
+            });
+        
+                $('#game-container').mouseleave(function() {
+                $('.mask').css('background', 'rgba(0, 0, 0, 0.90)');
+                });
+            });
+        </script>
     </body>
 </html>
